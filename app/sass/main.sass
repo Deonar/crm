@@ -19,6 +19,7 @@ body
 	line-height: 1.65
 	font-family: $default-font
 	overflow-x: hidden
+	background: url("../img/main-bg.jpg") no-repeat center top
 	input, textarea
 			border: #666 1px solid
 			outline: none
@@ -34,6 +35,283 @@ body
 
 .text-center
 	text-align: center
+
+//Header
+.header_container
+	position: relative
+.logo
+	box-shadow: 0px 0px 0px 6px #000
+	border-radius: 50%
+	position: absolute
+	background: #24221f
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+.language-switcher
+	.language
+		padding-right: 25px
+		&-item
+			line-height: 85px
+			font-size: 12px
+			text-transform: uppercase
+			a
+				text-decoration: none
+				color: $font-color
+				&:hover
+					color: $hover-color
+			&:first-child
+				&:before
+					display: none
+			&:before
+				padding-right: .5rem
+				padding-left: .5rem
+				color: #6c757d
+				content: "/"
+.menu-line
+	font-size: 12px
+	text-transform: uppercase
+	.nav-link
+		text-decoration: none
+		color: $font-color
+		padding: 11px 20px
+		&:hover
+			color: $hover-color
+	&_left
+		padding-right: 100px
+	&_right
+		padding-left: 100px
+.header
+	&__line-top
+		background: black
+		padding: 0 3px 3px
+		border: solid 1px $border-color
+		.line-grid
+			background: #181817 url("../img/grid-bg.png") repeat-x
+			background-position-y: center
+			height: 85px
+
+	&__line-bottom
+		padding: 3px
+		border: solid 1px $border-color
+		.line-grid
+			background: #181817 url("../img/grid-bg.png") repeat-x
+			background-position-y: center
+			height: 85px
+//Slider
+.main-slider
+	margin-top: 20px
+.slider-container
+	margin: auto
+	max-width: 940px
+	position: relative
+	padding: 20px 60px
+	border: solid 1px $border-color
+	.slick-arrow
+		outline: none
+		cursor: pointer
+		position: absolute
+		display: block
+		height: 65px
+		width: 65px
+		top: 50%
+		transform: translateY(-50%)
+		z-index: 1
+		border: none
+	.slick-prev
+		background: url('../img/arrow-left.png') no-repeat center
+		left: -90px
+	.slick-next
+		background: url('../img/arrow-right.png') no-repeat center
+		right: -90px
+	.slick-dots
+		position: absolute
+		padding: 0
+		list-style: none
+		left: 50%
+		transform: translateX(-50%)
+		background: $accent
+		border: 1px solid $border-color
+		border-radius: 16px
+		margin: 0
+		line-height: 0
+		padding: 5px 10px
+		bottom: -33px
+		li
+			display: inline-block
+			vertical-align: middle
+			width: 15px
+			height: 15px
+			margin: 0 6px
+			padding: 0
+			cursor: pointer
+			background: $border-color
+			border-radius: 50%
+			button
+				font-size: 0
+				line-height: 0
+				display: block
+				width: 15px
+				height: 15px
+				padding: 5px
+				cursor: pointer
+				border: 0
+				border-radius: 50%
+				outline: none
+				background: $border-color
+				&:hover
+					background: $white
+		.slick-active button
+			background: $white
+	&:before
+		display: inline-block
+		width: 23px
+		height: 23px
+		border-radius: 50%
+		background: #141414 url("../img/star.png") no-repeat center
+		content: ""
+		top: -14px
+		left: 50%
+		transform: translateX(-50%)
+		position: absolute
+		z-index: 1
+.joker-slider
+	&__item
+		.slide-link
+		img
+			border: 1px solid $border-color
+			max-width: 235px
+			margin: 0 auto
+
+//Contant
+.contant-wrapper
+	background: rgba(0, 0, 0, 0.3)
+	margin: 0 7px
+	border: solid 1px $border-color
+	box-shadow: 0px 0px 0px 7px rgba(0, 0, 0, 0.3)
+.contant-left
+	border-right: 1px dashed $border-color
+	margin-right: -1px
+.contant-right
+	border-left: 1px dashed $border-color
+	margin-left: -1px
+.main-contant
+	color: $font-color
+	margin-top: 50px
+	margin-bottom: 100px
+	position: relative
+	&__item
+		margin: 3px
+		padding: 34px
+		padding-bottom: 15px
+		a
+			color: $font-color
+			&:hover
+				text-decoration: none
+				color: $hover-color
+	&__item:nth-child(2n)
+		background: rgba(43, 43, 43, 0.4)
+	&__img
+		margin: auto
+		margin-bottom: 15px
+		max-width: 265px
+		border: solid 1px $border-color
+		text-align: center
+		position: relative
+		img
+			margin: auto
+			padding: 5px
+		&:before,&:after
+			position: absolute
+			width: 23px
+			height: 23px
+			border-radius: 50%
+			background: url("../img/star.png") no-repeat center
+			content: ""
+			top: 50%
+			transform: translateY(-50%)
+			z-index: 1
+		&:before
+			left: -30px
+		&:after
+			right: -30px
+	&__description
+		text-align: center
+		font-size: 14px
+		margin: 0
+
+.main-contant__title
+	position: absolute
+	text-transform: uppercase
+	border: 1px solid $border-color
+	background: $accent
+	left: 50%
+	top: -19px
+	transform: translateX(-50%)
+	background: $accent
+	z-index: 2
+	border-radius: 37px
+	padding: 0 6px
+	span
+		display: inline-block
+		line-height: 37px
+		padding: 0 6px
+		//font-size: 25px
+	&:before, &:after
+		display: inline-block
+		width: 23px
+		height: 23px
+		border-radius: 50%
+		background: url("../img/star.png") no-repeat center
+		content: ""
+		position: relative
+		top: 5px
+
+//Pagination
+.pagination
+	margin-top: 10px
+	font-size: 12px
+	padding: 0
+	display: flex
+	justify-content: center
+	list-style: none
+	.page-link
+		color: $font-color
+		padding: 3px
+		&:hover
+			text-decoration: none
+			color: $hover-color
+
+//Footer
+.footer
+	border-top: 5px solid $border-color
+	background: $bg-color
+	color: $font-color
+	padding-top: 30px
+	text-transform: uppercase
+	font-size: 10px
+	&-item
+		border-right: 1px solid $border-color
+		margin-right: -1px
+		padding: 0 6px
+	&-item:last-child
+		border: none
+		padding-right: 6px
+		padding-left: 6px
+	&-title
+		margin: 15px
+		text-align: center
+		color: $white
+	&-links
+		padding: 0
+		list-style: none
+		text-align: center
+		a
+			color: $font-color
+			&:hover
+				text-decoration: none
+				color: $hover-color
+	.copyright
+		padding: 30px
 
 
 @import "media" // Always at the end
